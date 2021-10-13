@@ -5,7 +5,8 @@ import sys
 def is_positive_integer(n):
     """Returns True if n is a positive integer"""
 
-
+    if n > 0:
+        return True
     return False
 
 
@@ -15,8 +16,15 @@ def process(n):
        - n is evenly divisible by 5 (returns 'Buzz')
        - n is evenly divisible by both 3 and 5 (returns 'FizzBuzz')"""
 
-    return ''
-
+    if n < 3:
+        return str(n)
+    elif n % 3 == 0 and n % 5 == 0:
+        return str('FizzBuzz')
+    elif n % 3 == 0:
+        return str('Fizz')
+    elif n % 5 == 0:
+        return str('Buzz')
+    
 
 @click.command()
 @click.option('-n', default=100, help='A positive integer')
