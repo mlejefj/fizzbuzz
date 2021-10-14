@@ -9,4 +9,4 @@ install:
 
 # command(s) to run tests
 script:
-  - python -m unittest discover -v
+  - python -m unittest discover
